@@ -97,7 +97,7 @@ define(['knockout', 'text!./faceted-datatable.html', 'crossfilter', 'colvis', ],
 			self.reference.subscribe(function (newValue) {
 				if (self.reference() != null) {
 					self.componentLoading(true);
-					self.data(new crossfilter(self.reference()));
+					self.data(new crossfilter(newValue));
 					self.facets.removeAll();
 					if (self.options && self.options.Facets) {
 						// Iterate over the facets and set the dimensions

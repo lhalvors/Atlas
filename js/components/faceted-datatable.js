@@ -144,7 +144,7 @@ define(['knockout', 'text!./faceted-datatable.html', 'crossfilter', 'colvis', ],
 		// init component
 		if (ko.isComputed(self.reference)) {
 			// valueHasMutated doesn't work for computed
-			self.reference.notifySubscribers();
+			self.reference.notifySubscribers(self.reference.peek());
 		} else {
 			self.reference.valueHasMutated(); 
 		}

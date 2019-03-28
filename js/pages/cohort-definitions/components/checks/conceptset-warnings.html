@@ -3,9 +3,10 @@
 </div>
 <div data-bind="eventListener:[{event:'click', selector: '.btn-fix', callback: fixRedundantConceptSet}]">
     <div class="conceptset-warnings">
+<!--
 <faceted-datatable params="{columns: $component.warningsColumns, options: $component.warningsOptions,reference: $component.warnings, order: [],
            drawCallback: $component.drawCallback, stateSaveCallback: $component.stateSaveCallback, stateLoadCallback: $component.stateLoadCallback}"></faceted-datatable>
-<!--
+-->
 				<table data-bind="dataTable: {
 					data: $component.warnings,
 					options: {
@@ -20,7 +21,6 @@
 							columns: $component.warningsColumns
 					}
 				}"></table>
--->
 
 		</div>
 </div>
